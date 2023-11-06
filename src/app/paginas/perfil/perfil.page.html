@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-icon slot="start" name="menu" size="large" class="ion-padding" (click)="verMenu()"></ion-icon>
+    <ion-text slot="end" >
+    </ion-text>
+    <ion-icon slot="end" name="person-circle-outline" class="ion-padding" size="large"></ion-icon>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+<ion-list  *ngIf = "info">
+  <center><ion-icon slot="center" name="person-circle-outline" class="ion-padding" size="large"></ion-icon></center>
+  <ion-item>
+    <ion-label>
+      <h2>Nombre:</h2>{{info.nombre}}
+    </ion-label>
+  </ion-item>
+  <ion-item>
+    <ion-label>
+      <h2>Tipo de perfil:</h2>{{info.perfil}}
+    </ion-label>
+  </ion-item>
+  <ion-item>
+    <ion-label>
+      <h2>Correo:</h2>{{info.correo}}
+    </ion-label>
+  </ion-item>
+  </ion-list>
+</ion-content>

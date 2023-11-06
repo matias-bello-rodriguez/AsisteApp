@@ -1,0 +1,59 @@
+<ion-app >
+  <ion-menu side="start" menuId="first" contentId="main" *ngIf="login == true">
+    <ion-header>
+      <ion-toolbar color="dark">
+        <ion-title>
+          Menu
+        </ion-title>
+        <ion-icon slot="end" name="close" size="large" class="ion-padding" (click)="cerrarMenu()"></ion-icon>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <ion-menu-toggle>
+        <ion-item detail routerLink="/menu" (click)="cerrarMenu()">
+          <ion-icon slot="start" name="home-outline"></ion-icon>
+          Menu Inicio
+        </ion-item>
+      </ion-menu-toggle>
+        <ion-menu-toggle *ngIf="rol == 'estudiante'">
+        <ion-item detail routerLink="/qrfinal" (click)="cerrarMenu()">
+          <ion-icon slot="start" name="qr-code-outline"></ion-icon>
+            QR Acceso
+        </ion-item>
+      </ion-menu-toggle>
+      <ion-menu-toggle *ngIf="rol == 'profesor'" >
+        <ion-item detail routerLink="/ajustes" (click)="cerrarMenu()">
+          <ion-icon slot="start" name="qr-code-outline"></ion-icon>
+            mensajes
+        </ion-item>
+      </ion-menu-toggle>
+        <ion-menu-toggle *ngIf="rol == 'estudiante'">
+        <ion-item detail routerLink="/cursos" (click)="cerrarMenu()">
+          <ion-icon slot="start" name="list-outline"></ion-icon>
+          Cursos Disponibles
+        </ion-item>
+      
+    </ion-menu-toggle>
+      <ion-menu-toggle >
+      <ion-item detail routerLink="/perfil" (click)="cerrarMenu()">
+        <ion-icon slot="start" name="people-circle-outline"></ion-icon>
+          Perfil
+        </ion-item>
+          
+      </ion-menu-toggle>
+        <ion-menu-toggle>
+        <ion-item detail  (click)="logut()" class="cerrar">
+          <ion-icon slot="start" name="exit-outline"></ion-icon>
+          Cerrar Sesion
+      </ion-item>
+      </ion-menu-toggle>
+
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+
+
+  <ion-router-outlet id="main"></ion-router-outlet>
+
+</ion-app>

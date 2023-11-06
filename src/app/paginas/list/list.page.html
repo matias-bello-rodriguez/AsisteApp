@@ -1,0 +1,63 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-icon slot="start" name="menu" size="large" class="ion-padding" (click)="verMenu()"></ion-icon>
+    <ion-title>
+      ACCESO
+    </ion-title>
+    <ion-icon slot="end" name="person-circle-outline" class="ion-padding" size="large"></ion-icon>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-list *ngFor="let item of ['Isaac']" >
+    <ion-item>
+      <ion-avatar slot="start">
+        <img src="/assets/compa1.jpg" />
+      </ion-avatar>
+      <ion-label>
+        <h2>{{item}}</h2>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+  <ion-list *ngFor="let item of ['Antonio']" >
+    <ion-item>
+      <ion-avatar slot="start">
+        <img src="/assets/compa2.jpg" />
+      </ion-avatar>
+      <ion-label>
+        <h2>{{item}}</h2>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+  <ion-list *ngFor="let item of ['Paolo']" >
+    <ion-item>
+      <ion-avatar slot="start">
+        <img src="/assets/compa3.jpg" />
+      </ion-avatar>
+      <ion-label>
+        <h2>{{item}}</h2>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+  <ion-list *ngFor="let item of ['Choro Sepulveda']" >
+    <ion-item>
+      <ion-avatar slot="start">
+        <img src="/assets/compa4.jpg" />
+      </ion-avatar>
+      <ion-label>
+        <h2>{{item}}</h2>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+  <ion-list *ngFor="let item of ['Mario Linux']" >
+    <ion-item>
+      <ion-avatar slot="start">
+        <img src="/assets/compa5.jpg" />
+      </ion-avatar>
+      <ion-label>
+        <h2>{{item}}</h2>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+</ion-content>
